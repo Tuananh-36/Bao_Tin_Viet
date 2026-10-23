@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#102a43"><title>Tin Việt | Tin tức mỗi ngày</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=register-20261023-17">
 </head>
 <body>
   <header class="site-header">
@@ -11,8 +11,25 @@
       <button id="menu-toggle" class="menu-toggle" aria-label="Mở danh mục" aria-expanded="false">☰</button>
       <nav id="nav-categories" class="nav-categories" aria-label="Chuyên mục"></nav><section id="mega-menu" class="mega-menu" aria-label="Tất cả chuyên mục" hidden></section>
       <a class="crawler-link" href="#crawler">+ Crawler</a>
+      <button id="account-button" class="account-button" type="button">Đăng nhập</button>
     </div>
   </header>
+  <dialog id="auth-dialog" class="auth-dialog" aria-labelledby="auth-title">
+    <button id="auth-close" class="auth-close" type="button" aria-label="Đóng">×</button>
+    <div class="auth-brand"><span class="brand-mark">TV</span></div>
+    <h2 id="auth-title">Đăng nhập</h2>
+    <p id="auth-intro" hidden></p>
+    <form id="auth-form">
+      <label for="auth-name" id="auth-name-label" hidden>Họ và tên</label><input id="auth-name" name="name" autocomplete="name" placeholder="Tên của bạn" hidden>
+      <label for="auth-email" id="auth-email-label">Gmail</label><input id="auth-email" name="email" type="email" autocomplete="email" placeholder="example@gmail.com" required>
+      <label for="auth-password">Mật khẩu</label><div class="password-field"><input id="auth-password" name="password" type="password" autocomplete="current-password" placeholder="Nhập mật khẩu" required><button id="auth-password-toggle" class="password-toggle" type="button" aria-label="Hiện mật khẩu" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg></button></div>
+      <div id="password-rules" class="password-rules" hidden><span id="rule-length">Ít nhất 8 ký tự</span><span id="rule-lower">Có chữ cái thường (a–z)</span><span id="rule-upper">Có chữ cái hoa (A–Z)</span><span id="rule-number">Có ít nhất một chữ số (0–9)</span><span id="rule-symbol">Có ít nhất một ký tự đặc biệt (!@#$...)</span><span id="rule-nospace">Không chứa khoảng trắng</span></div>
+      <label for="auth-confirm" id="auth-confirm-label" hidden>Xác nhận mật khẩu</label><div id="auth-confirm-field" class="password-field" hidden><input id="auth-confirm" name="confirm" type="password" autocomplete="new-password" placeholder="Nhập lại mật khẩu"><button id="auth-confirm-toggle" class="password-toggle" type="button" aria-label="Hiện mật khẩu xác nhận" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg></button></div>
+      <button id="auth-submit" class="primary-button auth-submit" type="submit">Đăng nhập</button>
+    </form>
+    <button id="auth-switch" class="auth-switch" type="button">Chưa có tài khoản? Đăng ký tài khoản</button>
+    <p id="auth-status" class="auth-status" role="status"></p>
+  </dialog>
   <main id="app" class="container" tabindex="-1"></main>
   <footer class="site-footer"><div class="footer-grid container">
     <section><a class="brand footer-brand" href="#home"><span class="brand-mark">TV</span><span>TIN VIỆT<small>Tin tức mỗi ngày</small></span></a><p class="muted">Cập nhật tin tức, góc nhìn và câu chuyện đáng chú ý mỗi ngày.</p></section>
@@ -21,7 +38,7 @@
     <section><h2>Kết nối</h2><p>Email: <a href="mailto:toasoan@tinviet.vn">toasoan@tinviet.vn</a></p><p>Địa chỉ: 48 Giảng Võ, Hà Nội</p><div class="socials"><a href="https://facebook.com" aria-label="Facebook">f</a><a href="https://youtube.com" aria-label="YouTube">▶</a><a href="https://tiktok.com" aria-label="TikTok">♪</a></div></section>
   </div><div class="copyright">© <span id="year"></span> Tin Việt. Nội dung crawler được lưu trên thiết bị của bạn.</div></footer>
   <script src="dantri-seed.js"></script>
-  <script src="app.js"></script>
+  <script src="app.js?v=register-20261023-17"></script>
 </body></html>
 
 
